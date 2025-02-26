@@ -1,0 +1,32 @@
+package br.com.covadetiriri.covarituaiscoletivos.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.time.LocalDate;
+
+@Getter
+@Setter
+@Entity(name = "tb_ritual_inscription")
+@Table(schema = "public", name = "tb_ritual_inscription")
+public class RitualInscription {
+
+    private String fullName;
+    private String email;
+    private LocalDate birthDate;
+    private String whatsapp;
+    private String fullAddress;
+    private String motherName;
+    private boolean participatedBefore;
+    private String howDidYouHearAboutRitual;
+    private String descriptionOfHowYouHeardAboutRitual;
+    private boolean isAwareOfRitualInformation;
+    private boolean quimbandaFamily;
+    private String whichQuimbandaFamily;
+    private boolean hasDoneWorksInCipriano;
+    private boolean hasDoneOracleInCipriano;
+    private boolean doesMentoringWithKamuxinzela;
+
+}

@@ -1,0 +1,22 @@
+services:
+  cova-rituais-coletivos:
+    build:
+      context: .
+    image: cova-rituais-coletivos
+    ports:
+      - "8092:8080"
+    depends_on:
+      - postgresql
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresql:5432/covacollectiverituals
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+
+  postgresql:
+    image: postgres:16
+    ports:
+      - "5436:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=covacollectiverituals
